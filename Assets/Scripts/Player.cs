@@ -92,9 +92,11 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("1This is a debug message." + collision.gameObject.tag.ToString());
         if(collision.gameObject.tag == "Block")
         {
-            SceneManager.LoadScene("Game");
+            Debug.Log("2This is a debug message.");
+            SceneManager.LoadScene("Menu");
         }
     }
 }
